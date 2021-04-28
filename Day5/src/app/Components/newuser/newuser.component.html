@@ -1,0 +1,23 @@
+<form action="" (ngSubmit)="Add()">
+    <div class="alert alert-dark" >
+        <label for="name" class="col-3">Name</label>
+        <input type="text" [(ngModel)]="name" name="name" id="name" class="form-control col-6">
+    </div>
+    <div class="alert alert-dark">
+        <label for="Phone" class="col-3">Phone</label>
+        <input type="text" [(ngModel)]="phone" name="Phone" id="Phone" class="form-control col-6">
+    </div>
+    <div class="alert alert-dark">
+        <label for="Email" class="col-3">Email</label>
+        <input type="text" [(ngModel)]="email" name="Email" id="Email" class="form-control col-6">
+    </div>
+    <div class="alert alert-dark">
+        <label for="City" class="col-3">City</label>
+        <input type="text" [(ngModel)]="City" name="City" id="City" class="form-control col-6">
+    </div>
+    <div class="alert alert-dark">
+        <label for="Street" class="col-3">Street</label>
+        <input type="text" [(ngModel)]="Street" name="Street" id="Street" class="form-control col-6">
+    </div>
+   <div><input class="btn btn-success text-align" type="submit" value="Submit"></div>
+</form>
