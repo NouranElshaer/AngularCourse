@@ -17,8 +17,7 @@ export class UserdetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.myService.getUserById(this.id).subscribe(
-      (res)=>{this.user=Object.values(res)[0].EmployeesData},
-      // (res)=>{console.log(Object.values(res)[0].EmployeesData)},
+      (res)=>{this.user=(res)},
 
       (err)=>{console.log(err)}
     )

@@ -1,5 +1,6 @@
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { UsersService } from 'src/app/Services/users.service';
 })
 export class UsersComponent implements OnInit {
 
-  constructor(private myService:UsersService) { }
+  constructor(private myService:UsersService, private router:Router) { }
   users:any;
   deleteID:any;
   ngOnInit(): void {
@@ -22,18 +23,9 @@ export class UsersComponent implements OnInit {
   }
   
   OpenDelete(user:any){
-    this.deleteID= user.id;
-    // console.log(this.deleteID);
-    // this.myService.open(cont, options:{
-    //   backdrop: 'static',
-    //   size:'lg'
-    // });
     this.myService.DeleteUserById(user.id).subscribe();
-
+    window.location.href = window.location.href
   }
 
-  delete(){
-    // this.myService.DeleteUserById(id)._subscribe();
-  }
-
+  
 }

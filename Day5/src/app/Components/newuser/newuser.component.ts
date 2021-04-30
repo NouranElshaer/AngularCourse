@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { UsersService } from 'src/app/Services/users.service';
 })
 export class NewuserComponent implements OnInit {
 
-  constructor(private myService:UsersService) { }
+  constructor(private myService:UsersService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -51,7 +52,7 @@ Add(){
   };
 
   this.myService.AddNewUser(user).subscribe();
-
+  this.router.navigate(['/users'])
 
 }
 }
